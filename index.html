@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UkeOppagave</title>
+
+    <script type="application/javascript">
+
+        const personArray = [];
+
+        function visPersonRegister() {
+
+            const objPerson = {
+                Navn: "Gurjot Singh Aulakh",
+                Adresse: "Husebygata 24B, 3414 Lierstranda",
+                Telefonnummer: 97387540
+            };
+
+            personArray.push(objPerson);
+
+            let ut = "<table><tr>" +
+                "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
+                "</tr>";
+
+            for (let i=0; i<personArray.length; i++) {
+                document.getElementById("personRegister").innerHTML = ut;
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <button onclick="visPersonRegister()">Vis personregister</button>
+    <div id="personRegister"></div>
+
+</body>
+</html>
